@@ -1,4 +1,4 @@
-def artist_array
-  artists = ["Hozier", "Ariana Grande", "Usher"]
-  artists.push = "Beyonce"
+def colors
+  colors_in_the_rainbow = ["red", "orange", "yellow", "green", "blue", "indigo"]
+  colors_in_the_rainbow.push = "violet"
 end
