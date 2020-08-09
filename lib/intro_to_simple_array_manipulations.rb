@@ -16,4 +16,4 @@ def using_pop (continents)
   p deleted_string
 end
 
-def 
+def pop_with_args
