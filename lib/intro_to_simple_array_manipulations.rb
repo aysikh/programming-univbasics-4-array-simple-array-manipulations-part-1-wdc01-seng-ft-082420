@@ -4,24 +4,30 @@ def using_push (colors_in_the_rainbow, next_color)
   colors_in_the_rainbow.push next_color
 end
 
-#
-describe "using_unshift" do 
-  before(:each) do 
-    bouroughs_in_nyc = ["Brooklyn", "Queens", "Manhattan", "Bronx"]
-    @new_neighborhood = "Staten Island"
-    @updated_array = using_unshift(bouroughs_in_nyc, @new_neighborhood)
-  end
-  
-  it "takes in two arguments, an array and a string and adds that string to the front of the array using the unshift method" do
-    expect(@updated_array.first).to eq(@new_neighborhood)
-  end
-
-  it "increases the length of the array" do 
-    expect(@updated_array.size).to eq(5)
-  end
+def using_unshift
+  bouroughs_in_nyc = ["Brooklyn", "Queens", "Manhattan", "Bronx"]
+  new_neighborhood = "Staten Island"
+  bouroughs_in_nyc.unshift new_neighborhood
 end
 
-describe "using_pop" do
+# 
+#describe "using_unshift" do 
+#  before(:each) do 
+#    bouroughs_in_nyc = ["Brooklyn", "Queens", "Manhattan", "Bronx"]
+#    @new_neighborhood = "Staten Island"
+#    @updated_array = using_unshift(bouroughs_in_nyc, @new_neighborhood)
+#  end
+#  
+#  it "takes in two arguments, an array and a string and adds that string to the front of the array using the unshift method" do
+#    expect(@updated_array.first).to eq(@new_neighborhood)
+#  end
+#
+#  it "increases the length of the array" do 
+#    expect(@updated_array.size).to eq(5)
+#  end
+#end
+
+#describe "using_pop" do
   before(:each) do 
     @continents = ["Africa", "Asia", "Europe", "North America", "South America", "Oceania", "Antarctica"]
     @deleted_string = using_pop(@continents)
@@ -76,4 +82,4 @@ describe "shift_with_args" do
   it "decreases the length of the array by 2" do 
     expect(@brands_removed.size).to eq(2)
   end
-end 
+end
